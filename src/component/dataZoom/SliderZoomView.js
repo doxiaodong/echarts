@@ -479,7 +479,9 @@ define(function (require) {
                     onmouseover: bind(this._showDataInfo, this, true),
                     onmouseout: bind(this._showDataInfo, this, false)
                 };
-                var iconStyle = {x: -1, y: 0, width: 2, height: 2};
+                var handleOffset = dataZoomModel.get('handleOffset');
+                var pathOffset = handleIndex === 0 ? -handleOffset : handleOffset;
+                var iconStyle = {x: -1 + pathOffset, y: 0, width: 2, height: 2};
 
                 var path = iconStr.indexOf('image://') === 0
                     ? (

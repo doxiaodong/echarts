@@ -52,6 +52,7 @@ define(function(require) {
             // Percent of the slider height
             handleSize: '100%',
 
+            handleOffset: 0,
             handleStyle: {
                 color: '#a7b7cc'
             },
